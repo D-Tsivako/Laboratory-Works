@@ -3,7 +3,7 @@
 namespace Matrix
 {
 	typedef double(*value)(int, int);
-	typedef double(*cosT)(double, double);
+	typedef double(*cosTaylor)(double, double);
 
 	int** allocateMemory(int, int);
 
@@ -21,11 +21,11 @@ namespace Matrix
 
 	void randomArray(int**, int, int);
 
-	double valueArgument(int, int);
+	double formula(int, int);
 
 	double comparisonMatrix(double**, double**, int, int);
 
-	void inputMatrix(double**, int, int, double, cosT);
+	void inputMatrix(double**, int, int, double, cosTaylor);
 
 	int enterNumber();
 	

@@ -110,6 +110,44 @@ void Matrix::inputMatrix(double** matrix, int n, int m, value arg)
 	}
 }
 
+void Matrix::inputMatrix(double** matrix, int n, int m, double lim, cosTaylor cos)
+{
+	if (matrix == nullptr)
+	{
+		throw invalid_argument("Array can not be null.");
+	}
+
+	if (*matrix == nullptr)
+	{
+		throw invalid_argument("Array can not be null.");
+	}
+
+	if (n <= 0)
+	{
+		throw invalid_argument("Count of array elements can not be less or equal 0.");
+	}
+
+	if (m <= 0)
+	{
+		throw invalid_argument("Count of array elements can not be less or equal 0.");
+	}
+
+	for (int i = 0; i < n; i++)
+	{
+		for (int j = 0; j < m; j++)
+		{
+			if (i != j)
+			{
+				matrix[i][j] = (pow((i + j), 2) - cos((double)2 * i, lim) + cos((double)2 * j, lim)) / (cos((double)(i + j), lim) + (pow((1 + i), 2)));
+			}
+			else
+			{
+				matrix[i][j] = i + j;
+			}
+		}
+	}
+}
+
 void Matrix::inputMatrix(double** matrix, int n, int m)
 {
 	if (matrix == nullptr)
@@ -171,7 +209,7 @@ void Matrix::displayMatrix(int** matrix, int n, int m)
 			cout << matrix[i][j] << ' ';
 		}
 
-		cout << std::endl;
+		cout << endl;
 	}
 }
 
@@ -204,7 +242,7 @@ void Matrix::displayMatrix(double** matrix, int n, int m)
 			cout << matrix[i][j] << ' ';
 		}
 
-		cout << std::endl;
+		cout << endl;
 	}
 }
 
@@ -239,7 +277,7 @@ void Matrix::randomArray(int** matrix, int n, int m)
 	}
 }
 
-double Matrix::valueArgument(int i, int j)
+double Matrix::formula(int i, int j)
 {
 	double result;
 
@@ -284,43 +322,7 @@ double Matrix::comparisonMatrix(double** matrixA, double** matrixB, int columns,
 	return maxDifference;
 }
 
-void Matrix::inputMatrix(double** matrix, int n, int m, double lim, cosT cos)
-{
-	if (matrix == nullptr)
-	{
-		throw invalid_argument("Array can not be null.");
-	}
 
-	if (*matrix == nullptr)
-	{
-		throw invalid_argument("Array can not be null.");
-	}
-
-	if (n <= 0)
-	{
-		throw invalid_argument("Count of array elements can not be less or equal 0.");
-	}
-
-	if (m <= 0)
-	{
-		throw invalid_argument("Count of array elements can not be less or equal 0.");
-	}
-
-	for (int i = 0; i < n; i++)
-	{
-		for (int j = 0; j < m; j++)
-		{
-			if (i != j)
-			{
-				matrix[i][j] = (pow((i + j), 2) - cos((double)2 * i, lim) + cos((double)2 * j, lim)) / (cos((double)(i + j), lim) + (pow((1 + i), 2)));
-			}
-			else
-			{
-				matrix[i][j] = i + j;
-			}
-		}
-	}
-}
 
 int Matrix::enterNumber()
 {
@@ -341,7 +343,7 @@ double Matrix::enterAccuracy()
 	double lim;
 	while (true)
 	{
-		cout << "Enter accuracy > 0 :" << endl;
+		cout << "Enter accuracy > 0 : ";
 		cin >> lim;
 
 		if (lim > 0)
@@ -357,18 +359,18 @@ double Matrix::ñosX(double x, double lim)
 	{
 		throw out_of_range("Accuracy can not be less than 0 or more than 1");
 	}
-
-	double term = 1;
-	double sum = 1;
+	
+	const double PI = 3.14159265358979323846;
+	x = fmod(x, PI * 2);
+	double sum = 0, term = 1;
 	int i = 1;
 
-	while (fabs(term) > lim)
+	while (abs(term) > lim)
 	{
-		term *= -x * x / ((2 * i - 1) * 2 * i);
 		sum += term;
-
+		term *= -x * x / (2 * i - 1) / (2 * i);
 		i++;
 	}
-
+	
 	return sum;
 }

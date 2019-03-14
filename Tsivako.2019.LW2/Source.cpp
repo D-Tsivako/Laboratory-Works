@@ -19,15 +19,14 @@ int main()
 	system("cls");
 
 	inputMatrix(matrixA, n, n, lim, ñosX);
-	cout << " Taylor series: " << endl;
+	cout << "Taylor series: " << endl;
 	displayMatrix(matrixA, n, n);
 
-	inputMatrix(matrixB, n, n, valueArgument);
-
+	inputMatrix(matrixB, n, n, formula);
 	cout << "Inline functions: " << endl;
 	displayMatrix(matrixB, n, n);
 
-	cout << " The result of the matrix comparison: " << comparisonMatrix(matrixA, matrixB, n, n) << endl;
+	cout << "The result of the matrix comparison: " << comparisonMatrix(matrixA, matrixB, n, n) << endl;
 
 	system("pause");
 
