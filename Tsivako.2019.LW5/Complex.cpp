@@ -41,9 +41,8 @@ Complex::~Complex()
 
 Complex Complex::conjugate()
 {
-	imaginary = -imaginary;
 	Complex conjugate;
-	conjugate.setComplex(real, imaginary);
+	conjugate.setComplex(real, -imaginary);
 	return conjugate;
 }
 
@@ -55,11 +54,6 @@ Complex Complex::operator+(const Complex& complex)
 Complex Complex::operator-(const Complex& complex)
 {
 	return Complex(complex.getRealPart() - this->getRealPart(), complex.getImaginaryPart() - this->getImaginaryPart());
-}
-
-Complex Complex::operator-()
-{
-	return Complex(-(this->getRealPart()), -(this->getImaginaryPart()));
 }
 
 Complex Complex::operator*(const Complex& complex)
