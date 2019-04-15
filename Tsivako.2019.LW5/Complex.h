@@ -18,7 +18,6 @@ public:
 	Complex conjugate();
 	Complex operator+(const Complex&);
 	Complex operator-(const Complex&);
-	Complex operator-();
 	Complex operator*(const Complex&);
 	Complex operator/(const Complex&);
 
