@@ -41,9 +41,8 @@ Complex::~Complex()
 
 Complex Complex::conjugate()
 {
-	imaginary = -imaginary;
 	Complex conjugate;
-	conjugate.setComplex(real, imaginary);
+	conjugate.setComplex(real, -imaginary);
 	return conjugate;
 }
 

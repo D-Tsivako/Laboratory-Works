@@ -27,8 +27,20 @@ int main()
 	cout << complex2;
 	
 	Complex complex3;
-	complex3 = complex1 / complex2;
-	cout << complex3;
+	complex3 = complex1 + complex2;
+	cout <<"Sum: "<< complex3;
+
+	Complex complex4;
+	complex4 = complex1 - complex2;
+	cout << "Difference: " << complex4;
+
+	Complex complex5;
+	complex5 = complex1 * complex2;
+	cout << "Product: " << complex5;
+
+	Complex complex6;
+	complex6 = complex1 / complex2;
+	cout << "Quotirnt: " << complex6;
 
 	system("pause");
 }
