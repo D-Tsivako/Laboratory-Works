@@ -8,3 +8,5 @@
 03.04.2019 [Laboratory №4.](https://github.com/D-Tsivako/Laboratory-Works/tree/master/Tsivako.2019.LW4)
 
 09.04.2019 [Laboratory №5.](https://github.com/D-Tsivako/Laboratory-Works/tree/master/Tsivako.2019.LW5)
+
+16.04.2019 [Laboratory №6.](https://github.com/D-Tsivako/Laboratory-Works/tree/master/Tsivako.2019.LW6)
