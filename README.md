@@ -11,4 +11,4 @@
 
 16.04.2019 [Laboratory №6.](https://github.com/D-Tsivako/Laboratory-Works/tree/master/Tsivako.2019.LW6)
 
-17.04.2019 [Laboratory №7 (files).](https://github.com/D-Tsivako/Laboratory-Works/tree/master/Tsivako.2019.LW7)
+17.04.2019 [Laboratory №7 (files - Laboratory №1).](https://github.com/D-Tsivako/Laboratory-Works/tree/master/Tsivako.2019.LW7)
