@@ -13,6 +13,6 @@
 
 17.04.2019 [Laboratory №7 (files - Laboratory №1).](https://github.com/D-Tsivako/Laboratory-Works/tree/master/Tsivako.2019.LW7)
 
-23.04.2019 [Laboratory №8 (files - Laboratory №1).](https://github.com/D-Tsivako/Laboratory-Works/tree/master/Tsivako.2019.LW8)
+23.04.2019 [Laboratory №8 (files - Laboratory №2).](https://github.com/D-Tsivako/Laboratory-Works/tree/master/Tsivako.2019.LW8)
 
-23.04.2019 [Laboratory №9 (files - Laboratory №2).](https://github.com/D-Tsivako/Laboratory-Works/tree/master/Tsivako.2019.LW9)
+23.04.2019 [Laboratory №9 (files - Laboratory №3).](https://github.com/D-Tsivako/Laboratory-Works/tree/master/Tsivako.2019.LW9)
