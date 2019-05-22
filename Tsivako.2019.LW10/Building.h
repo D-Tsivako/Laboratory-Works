@@ -1,5 +1,5 @@
-#ifndef automobile_h
-#define automobile_h
+#ifndef building_h
+#define building_h
 
 const int N = 25;
 
